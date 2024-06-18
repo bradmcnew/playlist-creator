@@ -1,0 +1,35 @@
+.SearchBar {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.search {
+    width: 25%;
+    height: 3rem;
+    text-align: center;
+    border: 0.13rem solid #FFA500;
+    border-radius: 2rem;
+    font-size: 2rem;
+    color: #FFA500;
+    box-shadow: 0 1rem 2rem rgba(255, 165, 0, 0.3);
+    text-shadow: 0 0 0.1rem rgba(255, 165, 0, 0.8),
+    0 0 0.2rem rgba(255, 165, 0, 0.6),
+    0 0 0.3rem rgba(255, 165, 0, 0.4),
+    0 0 0.4rem rgba(255, 165, 0, 0.2);
+}
+.search::placeholder {
+    color: #FFA500;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.search:focus {
+    outline: none;
+    box-shadow: 0 0 0.5rem rgba(255, 165, 0, 0.8),
+    0 0 1rem rgba(255, 165, 0, 0.6),
+    0 0 1.5rem rgba(255, 165, 0, 0.4),
+    0 0 2rem rgba(255, 165, 0, 0.2);
+}

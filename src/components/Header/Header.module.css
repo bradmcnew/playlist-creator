@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.container {
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+.h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #FFA500;
+    text-shadow: 0 0 0.1rem rgba(255, 165, 0, 0.8),
+    0 0 0.2rem rgba(255, 165, 0, 0.6),
+    0 0 0.3rem rgba(255, 165, 0, 0.4),
+    0 0 0.4rem rgba(255, 165, 0, 0.2);
+}
