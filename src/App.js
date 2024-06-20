@@ -19,16 +19,25 @@ function App() {
     }
     setPlaylistTracks((prev => [track, ...prev]));
   }, [playlistTracks]);
-  const removeTrack = () => {
-
-  }
+  const removeTrack = useCallback((track) => {
+    if (!(playlistTracks.some(savedTrack => {return savedTrack.id === track.id}))) {
+      return;
+    }
+    setPlaylistTracks(playlistTracks.filter((savedTrack) => {
+      return savedTrack.id != track.id;
+    }));
+  }, [playlistTracks]);
 
 
   return (
     <div className="App">
       <Header />
       <SearchBar />
-      <SearchResults onAdd={addTrack} tracks={searchResults}/>
+      <SearchResults 
+        onAdd={addTrack} 
+        onRemove={removeTrack}
+        tracks={searchResults}
+        />
       <Playlist playlist={playlistTracks} />
     </div>
   );

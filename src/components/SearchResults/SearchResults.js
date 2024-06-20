@@ -6,7 +6,11 @@ const SearchResults = (props) => {
     return (
         <div className={styles.SearchResults}>
             <h2>Results</h2>
-            <Tracklist tracks={props.tracks} onAdd={props.onAdd}></Tracklist>
+            <Tracklist 
+              tracks={props.tracks} 
+              onAdd={props.onAdd}
+              onRemove={props.onRemove}
+              />
         </div>
     )
 }

@@ -6,7 +6,12 @@ const Tracklist = (props) => {
     return (
         <div className={styles.tracklist}>
             {props.tracks.map(track => {
-                return (<Track key={track.id} track={track} onAdd={props.onAdd}/>)
+                return (<Track 
+                            key={track.id} 
+                            track={track} 
+                            onAdd={props.onAdd}
+                            onRemove={props.onRemove}
+                            />)
             })}
         </div>
     )
