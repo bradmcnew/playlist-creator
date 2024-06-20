@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import styles from './Tracklist.module.css';
 import Track from '../Track/Track';
 
-const Tracklist = ({tracks}) => {
+const Tracklist = (props) => {
     return (
         <div className={styles.tracklist}>
-            {tracks.map(track => {
+            {props.tracks.map(track => {
                 return (<Track key={track.id} track={track} />)
             })}
         </div>
