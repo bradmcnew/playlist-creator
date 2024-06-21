@@ -26,6 +26,12 @@ const Track = (props) => {
     return (
         <div className={added ? `${styles.track} ${styles.added}` : styles.track} >
             <div className={styles.card}>
+                {props.track.previewUrl && (
+                    <audio controls className={styles.Preview}>
+                    <source src={props.track.previewUrl} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                    </audio>
+                )}
                 <h3>{props.track.name}</h3>
                 <p>{props.track.artist} | {props.track.album}</p>
             </div>
