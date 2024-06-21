@@ -2,22 +2,21 @@ import React, {useState, useEffect} from "react";
 import styles from "./Playlist.module.css";
 import Tracklist from "../Tracklist/Tracklist";
 
-const Playlist = ({playlist}) => {
-    const [playlistName, setPlaylistName] = useState('New Playlist');
+const Playlist = (props) => {
     const [isDefault, setIsDefault] = useState(true);
     const handleChange = (e) => {
-        setPlaylistName(e.target.value);
+        props.changeName(e.target.value);
         setIsDefault(false);
     }
     const handleFocus = () => {
         if (isDefault) {
-            setPlaylistName('');
+            props.changeName('');
             setIsDefault(false);
         }
     }
     const handleBlur = () => {
-        if (playlistName.trim() === '') {
-            setPlaylistName('New Playlist');
+        if (props.playlistName.trim() === '') {
+            props.changeName('New Playlist');
             setIsDefault(true);
         }
     }
@@ -28,10 +27,10 @@ const Playlist = ({playlist}) => {
                 onChange={handleChange} 
                 onFocus={handleFocus} 
                 onBlur={handleBlur} 
-                value={playlistName}
+                value={props.playlistName}
             />
-            <Tracklist tracks={playlist} context={"playlist"} playlist={playlist}/>
-            <button className={styles.save}>SAVE TO SPOTIFY</button>
+            <Tracklist tracks={props.playlist} context={"playlist"} playlist={props.playlist}/>
+            <button className={styles.save} onClick={props.savePlaylist}>SAVE TO SPOTIFY</button>
         </div>
     )
 }
