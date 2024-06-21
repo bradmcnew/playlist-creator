@@ -26,7 +26,7 @@ function App() {
       return;
     }
     setPlaylistTracks(playlistTracks.filter((savedTrack) => {
-      return savedTrack.id != track.id;
+      return savedTrack.id !== track.id;
     }));
   }, [playlistTracks]);
   const savePlaylist = () => {
