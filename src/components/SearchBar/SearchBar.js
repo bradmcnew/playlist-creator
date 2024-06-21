@@ -6,6 +6,14 @@ const SearchBar = (props) => {
     const handleChange = (e) => {
         setSearchValue(e.target.value);
     }
+    const search = () => {
+        props.onSearch(searchValue);
+    }
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            search();
+        }
+    }
 
     return (
         <div className={styles.SearchBar}>
@@ -16,6 +24,7 @@ const SearchBar = (props) => {
                 type="text" 
                 placeholder="Enter A Song, Album, or Artist" 
                 onChange={handleChange} 
+                onKeyDown={handleKeyPress}
                 value={searchValue} />
         </div>
     );
