@@ -12,7 +12,6 @@ const Track = (props) => {
     let button;
     let added;
     if (props.context === "playlist") {
-        button = <button className={styles.playlist}></button>;
         added = true;
     } else {
         const isInPlaylist = props.playlist.some(savedTrack => savedTrack.id === props.track.id);
