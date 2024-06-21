@@ -10,6 +10,8 @@ const SearchResults = (props) => {
               tracks={props.tracks} 
               onAdd={props.onAdd}
               onRemove={props.onRemove}
+              context={"searchResults"}
+              playlist={props.playlist}
               />
         </div>
     )

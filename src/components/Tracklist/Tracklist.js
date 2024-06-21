@@ -11,6 +11,8 @@ const Tracklist = (props) => {
                             track={track} 
                             onAdd={props.onAdd}
                             onRemove={props.onRemove}
+                            context={props.context}
+                            playlist={props.playlist}
                             />)
             })}
         </div>

@@ -29,14 +29,16 @@ function App() {
   }, [playlistTracks]);
 
 
+
   return (
     <div className="App">
       <Header />
       <SearchBar />
-      <SearchResults 
+      <SearchResults
         onAdd={addTrack} 
         onRemove={removeTrack}
         tracks={searchResults}
+        playlist={playlistTracks}
         />
       <Playlist playlist={playlistTracks} />
     </div>

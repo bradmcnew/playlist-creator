@@ -15,6 +15,10 @@
     box-shadow: 0 0.5rem 1rem rgba(255, 165, 0, 0.3);
     width: 70%;
 }
+.added {
+    border: 0.13rem solid #00CED1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 206, 209, 0.3);
+}
 
 .card {
     display: flex;
@@ -41,13 +45,33 @@
     0 0 0.3rem rgba(255, 165, 0, 0.4),
     0 0 0.4rem rgba(255, 165, 0, 0.2);
 }
+.blue {
+    background-color: #00CED1;
+    box-shadow: 0 0 0.1rem rgba(0, 206, 209, 0.8),
+    0 0 0.2rem rgba(0, 206, 209, 0.6),
+    0 0 0.3rem rgba(0, 206, 209, 0.4),
+    0 0 0.4rem rgba(0, 206, 209, 0.2);
+}
 
 .remove:hover {
     box-shadow: none;
     background-color: #1A1A1A;
     color: #FFA500;
 }
+.remove.blue:hover {
+    box-shadow: none;
+    background-color: #1A1A1A;
+    color: #00CED1;
+}
 .remove:active {
     transform: scale(0.9);
     border: 1px solid #FFA500;
+}
+.remove.blue:active {
+    transform: scale(0.9);
+    border: 1px solid #00CED1;
+}
+
+.track:hover {
+    border: 2px solid #00CED1;
 }
