@@ -7,9 +7,7 @@ import SearchResults from './components/SearchResults/SearchResults';
 import Spotify from './api/spotify';
 
 function App() {
-  const [searchResults, setSearchResults] = useState([
-    {name: 'Search for a song!', artist: 'artist', album: 'album', id: 1, uri: 'spotify:track:1'},
-]);
+  const [searchResults, setSearchResults] = useState([]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('New Playlist');
 
