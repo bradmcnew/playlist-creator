@@ -32,8 +32,10 @@ const Track = (props) => {
                     Your browser does not support the audio element.
                     </audio>
                 )}
-                <h3>{props.track.name}</h3>
-                <p>{props.track.artist} | {props.track.album}</p>
+                <div className={styles.songInfo}>
+                    <h3>{props.track.name}</h3>
+                    <p>{props.track.artist} | {props.track.album}</p>
+                </div>
             </div>
             {button}
         </div>
