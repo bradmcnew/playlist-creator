@@ -1,4 +1,4 @@
-const clientId = '97b87da2658d4e8298b2c45f467a2a59'; // Insert client ID here.
+const clientId = ''; // Insert client ID here.
 const redirectUri = 'https://jammmersproj.netlify.app/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 let accessToken;
 
